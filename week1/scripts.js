@@ -1,24 +1,43 @@
-// const btn = document.getElementById('myButton')
-// const sumDiv = document.getElementById('sum')
-// let count = 0
+// // app.js
+// const getPosts = async () => {
+// 	try {
+// 		const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+// 		const posts = await response.json()
 
-// btn.addEventListener('click', () => {
-// 	if (sumDiv) {
-// 		count += 1
-// 		sumDiv.textContent = `Button clicked ${count} times`
+// 		// Берем только первые 10 постов
+// 		const limitedPosts = posts.slice(0, 10)
+
+// 		const postsContainer = document.getElementById('posts-container')
+// 		postsContainer.innerHTML = '' // Очищаем контейнер
+
+// 		limitedPosts.forEach(post => {
+// 			const p = document.createElement('p')
+// 			p.textContent = post.title
+// 			postsContainer.appendChild(p)
+// 		})
+// 	} catch (error) {
+// 		console.error('Ошибка:', error)
+// 		const postsContainer = document.getElementById('posts-container')
+// 		postsContainer.innerHTML = `<p style="color: red;">Ошибка загрузки: ${error.message}</p>`
 // 	}
-// })
+// }
 
-const obj = {
-	a: 25,
+// // Запускаем при загрузке страницы
+// document.addEventListener('DOMContentLoaded', getPosts)
+
+const person = {
+	name: 'Alice',
+	age: 30,
+	city: 'New York',
+	work: {
+		organization: 'school',
+	},
 }
 
-const objCopy = obj
+const person2 = structuredClone(person)
 
-objCopy.a = 50
+person2.name = 'Jo'
+person2.work.organization = 'gaz'
 
-console.log()
-
-const arr = [1, 2, 3]
-
-arr.map(num => console.log(num))
+console.log(person2)
+console.log(person)

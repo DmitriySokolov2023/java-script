@@ -25,19 +25,107 @@
 // // Запускаем при загрузке страницы
 // document.addEventListener('DOMContentLoaded', getPosts)
 
-const person = {
-	name: 'Alice',
-	age: 30,
-	city: 'New York',
-	work: {
-		organization: 'school',
-	},
-}
+// const person = {
+// 	name: 'Alice',
+// 	age: 30,
+// 	city: 'New York',
+// 	work: {
+// 		organization: 'school',
+// 	},
+// }
 
-const person2 = structuredClone(person)
+// const person2 = structuredClone(person)
 
-person2.name = 'Jo'
-person2.work.organization = 'gaz'
+// person2.name = 'Jo'
+// person2.work.organization = 'gaz'
 
-console.log(person2)
-console.log(person)
+// console.log(person2)
+// console.log(person)
+
+// const sum = (a, b) => {
+// 	return a + b
+// }
+// const powerSum = (sumFn, a, b) => {
+// 	const power = sumFn(a, b) ** 2
+
+// 	return power
+// }
+
+// const power = powerSum(sum, 5, 10)
+
+// console.log(power)
+
+// const person = {
+// 	name: 'Alice',
+// 	age: 30,
+// 	city: 'New York',
+// 	work: {
+// 		organization: 'school',
+// 	},
+// }
+
+// const { name, age } = person
+
+// console.log(name, age)
+
+// const obg = {}
+
+// const isInstance = obg instanceof Object
+
+// console.log(isInstance)
+
+// const a = 10
+// const b = 10
+
+// const myFn = a => {}
+
+// setTimeout(function () {
+// 	console.log('console')
+// }, 1000)
+
+// const btn = document.getElementById('myButton')
+// const div = document.getElementById('posts-container')
+
+// const sum = (a, b) => {
+// 	try {
+// 		if (typeof a !== 'number' || typeof b !== 'number') {
+// 			throw new TypeError('Both arguments must be numbers')
+// 		}
+// 		return a + b
+// 	} catch (error) {
+// 		console.log('Error:', error)
+// 		return null // или обработать иначе
+// 	}
+// }
+
+// const s1 = sum(5, 2) // 7
+// const s2 = sum(5, '2')
+
+// btn.addEventListener('click', () => {
+// 	const sm = sum(5, '8')
+
+// 	div.innerText = sm
+// })
+
+// const fnErr = () => {
+// 	try {
+// 		b = c + 1
+// 	} catch (error) {
+// 		console.error(error)
+// 		console.log(error.message)
+// 	}
+// }
+
+// fnErr()
+
+// console.log(123)
+
+// a = 5 + 2
+// a = 5 + 2;
+console.log('Шаг 1: Начинаем асинхронную операцию')
+
+setTimeout(() => {
+	console.log('Шаг 2: Асинхронная операция завершена')
+}, 1000) // Через 1 секунду
+
+console.log('Шаг 3: Уже выполнилось!') // Не ждет!

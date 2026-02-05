@@ -122,10 +122,37 @@
 
 // a = 5 + 2
 // a = 5 + 2;
-console.log('Шаг 1: Начинаем асинхронную операцию')
+// console.log('Шаг 1: Начинаем асинхронную операцию')
 
-setTimeout(() => {
-	console.log('Шаг 2: Асинхронная операция завершена')
-}, 1000) // Через 1 секунду
+// setTimeout(() => {
+// 	console.log('Шаг 2: Асинхронная операция завершена')
+// }, 1000) // Через 1 секунду
 
-console.log('Шаг 3: Уже выполнилось!') // Не ждет!
+// console.log('Шаг 3: Уже выполнилось!') // Не ждет!
+
+// const arr = [1, 2, 3, 4, 5]
+
+// for (let i = 0; i < arr.length; i++) {
+// 	console.log(arr[i])
+// }
+
+// arr.forEach((element, index) => {
+// 	arr[index] = element * 2
+// })
+
+// const newArr = arr.map(num => num * 2)
+// const filterArr = newArr.filter(el => el > 5)
+
+// console.log(arr)
+
+person = {
+	name: 'Alice',
+	age: 30,
+	city: 'New York',
+	work: { organization: 'school' },
+}
+
+const keys = Object.keys(person)
+for (const key of keys) {
+	console.log(key)
+}
